@@ -21,10 +21,24 @@ public abstract class SolutionTestBase<TSolution>
     }
 
     [TestMethod]
-    public void SolveSimple()
+    public void SolveTrivial()
     {
         TSolution solution = new() { TaskParameters = new(Base: 13, NumberLength: 3, LeftRightPartLength: 1) };
         Assert.AreEqual(13, solution.Solve());
+    }
+
+    [TestMethod]
+    public void SolveSimple()
+    {
+        TSolution solution = new() { TaskParameters = new(Base: 13, NumberLength: 5, LeftRightPartLength: 2) };
+        Assert.AreEqual(1183, solution.Solve());
+    }
+
+    [TestMethod]
+    public void SolveComplex()
+    {
+        TSolution solution = new() { TaskParameters = new(Base: 13, NumberLength: 7, LeftRightPartLength: 3) };
+        Assert.AreEqual(177450, solution.Solve());
     }
 
 
