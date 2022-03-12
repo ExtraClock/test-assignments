@@ -24,21 +24,21 @@ public abstract class SolutionTestBase<TSolution>
     public void SolveTrivial()
     {
         TSolution solution = new() { TaskParameters = new(Base: 13, NumberLength: 3, LeftRightPartLength: 1) };
-        Assert.AreEqual(13, solution.Solve());
+        Assert.AreEqual(169, solution.Solve());
     }
 
     [TestMethod]
     public void SolveSimple()
     {
         TSolution solution = new() { TaskParameters = new(Base: 13, NumberLength: 5, LeftRightPartLength: 2) };
-        Assert.AreEqual(1183, solution.Solve());
+        Assert.AreEqual(19097, solution.Solve());
     }
 
     [TestMethod]
     public void SolveComplex()
     {
         TSolution solution = new() { TaskParameters = new(Base: 13, NumberLength: 7, LeftRightPartLength: 3) };
-        Assert.AreEqual(177450, solution.Solve());
+        Assert.AreEqual(2661919, solution.Solve());
     }
 
 
@@ -51,7 +51,7 @@ public abstract class SolutionTestBase<TSolution>
         }
 
         TSolution solution = new();
-        Assert.AreEqual(661137896133L, solution.Solve());
+        Assert.AreEqual(9203637295151L, solution.Solve());
     }
 
     [TestMethod]

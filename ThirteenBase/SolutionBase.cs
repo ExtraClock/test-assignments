@@ -12,7 +12,7 @@ public abstract class SolutionBase
 
     /// <summary>
     /// Даёт ответ на поставленный в задаче вопрос.
-    /// Сложность = O (Base ^ (LeftRightPartLength - 1)) * O (CountNumbersWithGivenSumOfDigits)
+    /// Сложность = O (Base ^ LeftRightPartLength) * O (CountNumbersWithGivenSumOfDigits)
     /// Сложность O (CountNumbersWithGivenSumOfDigits) следующая в зависимости от варианта решения:
     ///     * PlainStupid - O (Base * LeftRightPartLength)
     ///     * для остальных решений сложность O(1), однако добавляется небольшой startup cost на прогрев кэша
@@ -20,8 +20,7 @@ public abstract class SolutionBase
     /// <returns>Количество "красивых" чисел с лидирующим нулём</returns>
     public long Solve()
     {
-        // так как левый разряд должен быть 0, фиксируем его и используем длину перебираемых чисел уменьшенную на единицу
-        return Solve(TaskParameters.LeftRightPartLength - 1, 0);
+        return Solve(TaskParameters.LeftRightPartLength, 0);
     }
 
     internal long Solve(int lengthCountDown, int sumOfDigits)
