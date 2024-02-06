@@ -1,0 +1,20 @@
+﻿= Oktopost Team Lead Assignment Solution
+:reproducible:
+// :toc:
+// :toclevels: 3
+:icons: font
+//:sectnums:
+
+[abstract]
+--
+This repo represents a solution for the assignment given by Oktopost for the Team Lead position.
+--
+
+== Repo Structure
+
+.The repo has the following structure:
+* `Team_Lead_Assignment` folder contains the original assignment as-is.
+* `Storage` folder contains a solution for the first coding task. +
+_Please refer to the README inside the folder._
+* `UrlShortener` folder contains a solution for the second project planning task. +
+_Please refer to the README inside the folder._
